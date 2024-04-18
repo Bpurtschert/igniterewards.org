@@ -1,1 +1,0 @@
-# IgniteRewards.org

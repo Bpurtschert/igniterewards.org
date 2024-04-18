@@ -1,0 +1,673 @@
+/* Brand */
+.brand-primary {
+  color: #000000;
+}
+.brand-secondary {
+  color: #6E6259;
+}
+.brand-tertiary {
+  color: #F5F3F0;
+}
+.color-me-red {
+  color: #F9423A;
+}
+.violet {
+  color: #66214A;
+}
+.blondlift {
+  color: #9052A5;
+}
+.cmtwo {
+  color: #F2D4D7;
+}
+.blowdry {
+  color: #7F988F;
+}
+.onetree1 {
+  color: #D7DCC8;
+}
+.onetree2 {
+  color: #6C7F2F;
+}
+.onetree3 {
+  color: #5DB1AB;
+}
+
+/* Grayscale */
+.white {
+  color: #FFFFFF;
+}
+.off-white {
+  color: #F1F1F1;
+}
+.light-gray {
+  color: #D6D6D6;
+}
+.gray {
+  color: #595959;
+}
+.dark-gray {
+  color: #393939;
+}
+.black {
+  color: #222222;
+}
+
+/* Notification/Sales/Promo */
+.green-success {
+  color: #00865A;
+}
+.yellow-warning {
+  color: #F6D459;
+}
+.red-danger {
+  color: #BF242B;
+}
+.blue-info {
+  color: #418DE7;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  width: 150px;
+  height: 45px;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.btn-secondary {
+  color: #ffffff;
+  background-color: #6E6259;
+}
+
+.btn-tertiary {
+  color: #ffffff;
+  background-color: #F5F3F0;
+}
+
+.btn-gry {
+  background-color: rgb(189, 187, 197);
+  color: #272727;
+}
+
+.btn-sm {
+  padding: 0.25em 0.5em;
+}
+
+.btn.disabled,
+.btn:disabled {
+  opacity: 0.5;
+  cursor:not-allowed;
+  background-color:#cecece;
+  color: #1f1f1f;
+}
+
+/* Radio Buttons and Checkboxes */
+.custom-control {
+  position: relative;
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.custom-control-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-control-label {
+  position: relative;
+  margin-bottom: 0;
+  vertical-align: top;
+}
+
+.custom-checkbox .custom-control-label::before,
+.custom-radio .custom-control-label::before {
+  position: absolute;
+  top: 0.25rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  content: "";
+  background-color: #fff;
+  border: #adb5bd solid 0.1rem;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.custom-checkbox .custom-control-input:disabled ~ .custom-control-label::before {
+  background-color: #e9ecef;
+}
+
+.custom-control-label::before {
+  border-radius: 0.25rem;
+}
+
+.custom-control-input:disabled ~ .custom-control-label {
+  color: #6c757d;
+}
+
+.custom-control-input:disabled ~ .custom-control-label::before {
+  background-color: #e9ecef;
+}
+
+.custom-control-label::after {
+  position: absolute;
+  top: 0.25rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-radio .custom-control-label::before {
+  border-radius: 50%;
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.custom-radio .custom-control-input:disabled ~ .custom-control-label::before {
+  background-color: #e9ecef;
+}
+
+.custom-radio .custom-control-input:disabled ~ .custom-control-label::before {
+  background-color: #e9ecef;
+}
+
+.custom-control-input.is-invalid ~ .custom-control-label::before {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.custom-control-input.is-invalid:checked ~ .custom-control-label::before {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.custom-control-input.is-invalid:disabled ~ .custom-control-label::before {
+  background-color: #f8f9fa;
+}
+
+/* CSV Table */
+.csv-table {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+.csv-table th,
+.csv-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.csv-table th {
+  background-color: #f2f2f2;
+}
+
+/* New styles for custom buttons */
+.btn-custom {
+  font-family: "Chalet - New York 1960", sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.background--success {
+  background-color: #00865A;
+}
+
+.border--success {
+  border: 2px solid #00865A;
+}
+
+.text--white {
+  color: #FFFFFF;
+}
+
+.background--warning {
+  background-color: #F6D459;
+}
+
+.border--warning {
+  border: 2px solid #F6D459;
+}
+
+.text--black {
+  color: #000000;
+}
+
+.background--danger {
+  background-color: #BF242B;
+}
+
+.border--danger {
+  border: 2px solid #BF242B;
+}
+
+.background--info {
+  background-color: #418DE7;
+}
+
+.border--info {
+  border: 2px solid #418DE7;
+}
+
+.banner {
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.button-container {
+  text-align: center;
+}
+
+
+.instructions-box {
+  background-color: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  align-items: left;
+}
+.success-box {
+  background-color: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  align-items: left;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding-right:  40px;
+  box-sizing: border-box;
+}
+
+.column-right{
+  float: right;
+  width: 50%;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  padding-right:  30px;
+  box-sizing: border-box;
+}
+
+.column-short{
+  float: left;
+  width: 175px;
+  padding-right:  10px;
+  box-sizing: border-box;
+}
+
+.column-short-right{
+  float: left;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  padding-right:  30px;
+  box-sizing: border-box;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#errorMessage {
+  color: white; /* Set the text color to red */
+  font-weight: bold; /* Optionally, make the text bold */
+  background-color: red;
+  width: 350px;
+  text-align: center;
+}
+
+#uploadStatusSuccess{
+  color: rgb(0, 0, 0);
+  background-color: rgb(200, 255, 200);
+  text-align: center;
+}
+
+#uploadStatusFailure{
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 185, 185);
+  width: Auto;
+  text-align: justify;
+}
+
+.error-cell {
+  background-color: #ff9f9f; /* Red background color */
+}
+
+@font-face {
+  font-family: "Chalet - New York 1960";
+  src: url("fonts/chalet_newyorknineteensixty.woff2") format("truetype");
+}
+
+@font-face {
+  font-family: "Chalet - London 1960";
+  src: url("fonts/chalet_londonnineteensixty.woff2") format("truetype");
+}
+
+@font-face {
+  font-family: "Chalet - Paris 1960";
+  src: url("fonts/ChaletTT-ParisSixty.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("fonts/HelveticaNeue.woff2") format("truetype");
+}
+
+/* Apply custom fonts to elements */
+.font--primary {
+  font-family: "Chalet - New York 1960", sans-serif;
+}
+
+.font--secondary {
+  font-family: "Chalet - London 1960", sans-serif;
+}
+
+.font--tertiary {
+  font-family: "Chalet - Paris 1960", sans-serif;
+}
+
+.font--quaternary{
+  font-family: "HelveticaNeue";
+}
+
+#header {
+  display: flex;
+  align-items: center; /* Center vertically */
+  position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #ffffff; /* Set background color to white */
+  z-index: 1000; /* Ensure the header is on top of other elements */
+}
+
+.header-link {
+  display: inline-block;
+  margin-left: 5px; /* Adjust spacing between links */
+  text-decoration: none; /* Remove underline */
+  color: #000000; /* Link color */
+  text-align: right;
+  padding-right: 25pt;
+}
+
+body {
+  font-family: "Chalet - New York 1960", sans-serif;
+  background-color: #FFFFFF;
+  padding: 50px;
+}
+
+h1 {
+  color: #000000;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: "Chalet - New York 1960";
+}
+
+#fileInput {
+  display: inline-block;
+  margin: 20px auto;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px dashed #000000;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  width: auto;
+  height: 150px;
+  text-align: center;
+}
+
+.custom-file-input {
+  display: none;
+}
+
+#output {
+  border: 1px solid #F2F2F2;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.banner {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+}
+
+.custom-file-label {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 20px auto;
+  font-size: 14px;
+  padding: 10px;
+  border: 1px dashed #000000;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  width: 100%;
+  height: 175px;
+  text-align: center;
+  color: #000000;
+}
+
+.custom-fonts-size{
+  font-weight: bold;
+  font-size: 15pt;
+}
+
+.custom-fonts-nav{
+  font-size: 10pt;
+  margin-left: auto;
+}
+
+.dashboard-box {
+  background-color: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-column-01 {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  border: 1px solid #f2f2f2;
+  justify-content: center;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+
+
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity and color as needed */
+  color: white;
+  width: 100%; /* Adjust width as needed */
+  height: 13%;
+  text-align: center; /* Center align text */
+  display: flex;
+  justify-content: center;
+}
+
+.overlay-text-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity and color as needed */
+  color: white;
+  width: 100%; /* Adjust width as needed */
+  height: 100%;
+  text-align: center; /* Center align text */
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  font-size: large;
+  text-align: center;
+  align-items: center;
+}
+
+.image-container:hover .overlay-text {
+  opacity: 0; /* Hide overlay text on hover */
+}
+
+.image-container:hover .overlay-text-hover {
+  opacity: 1; /* Show hover text on hover */
+}
+
+.bread-crumbs-link{
+  font-size: 8pt;
+  font-family: "Chalet - London 1960";
+  padding-bottom: 10pt;
+  display: inline-block;
+  margin-left: 5px; /* Adjust spacing between links */
+  text-decoration: none; /* Remove underline */
+  color: #000000; /* Link color */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.bread-crumbs{
+  display: flex;
+  width: 100%;
+  height: 20px;
+}
+
+.bread-crumbs-text{
+  font-size: 8pt;
+  font-family: "Chalet - London 1960";
+  text-transform: uppercase;
+}
+
+.date select {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-family: "Chalet - London 1960";
+}
+.input-form {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.input-form li {
+  flex: 0 0 calc(50% - 10px);
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+.input-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Chalet - London 1960";
+}
+.input-form input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.input-form-error input{
+  width: 100%;
+  padding: 8px;
+  border: none;
+  box-sizing: border-box;
+  border-bottom: 1px solid red;
+  content: "Error: value cannot be blank";
+}
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.error-message{
+  color: #BF242B;
+  font-size: 8pt;
+  font-family: "Chalet - London 1960";
+}
+
+.check-distributor-box {
+  background-color: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+#Distributor-exists {
+  font-family: "Chalet - London 1960";
+  color: red;
+}
