@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'Primary';
+    src: url('../fonts/PetrovSans-Regular.ttf') format('truetype'),
+  }
+  
+  /* Reset default margin and padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set body font and background color */
+  body {
+    font-family: "Primary";
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* Style header */
+  header {
+    background-color: #002750;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Style hero section */
+  #hero {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  #hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #ff433d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #ff0d0d;
+  }
+  
+  /* Style container */
+  .container {
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 100%;
+    width: 45px;
+    object-fit: contain;
+    margin-right: 10px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Style sections */
+  section {
+    padding: 50px 0;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  section ul {
+    list-style: none;
+  }
+  
+  /* Style footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Add this media query for smaller screens */
+  @media only screen and (max-width: 768px) {
+    .nav-menu {
+      display: none; /* Hide the nav menu by default on small screens */
+    }
+    .hamburger-menu {
+      display: block; /* Display the hamburger menu on small screens */
+    }
+  }
+  
+  /* Add this CSS to style the hamburger menu */
+  .hamburger-menu {
+    display: none; /* Hide the hamburger menu by default */
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    width: 100%;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 13px;
+  }
+  
+  /* Add styles for the navigation links */
+  .nav-menu ul {
+    list-style-type: none;
+    justify-content: right;
+  }
+  
+  .nav-menu ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Add styles to show the nav menu when the hamburger menu is clicked */
+  .nav-menu.open {
+    display: block;
+    position: absolute;
+    top: 70px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: #002750; /* Adjust background color */
+    padding: 10px;
+  }
+  
+  .nav-menu.open ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .header-table {
+    display: flex;
+    width: 100%; /* Set width to 100% to fill the container */
+  }
+  
+  .column {
+    flex: 1; /* Make the columns flexible to fill available space */
+  }
+  
