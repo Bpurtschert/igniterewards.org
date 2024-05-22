@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from 'react';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes instead of Switch
+import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
+import Home from './pages/Home';
+import Index from './pages/Index';
 
 function App() {
-  const [backendData, setBackendData] = useState({ users: [] });
-
-  useEffect(() => {
-    fetch("/api")
-      .then(response => response.json())  // Parse the JSON data from the response
-      .then(data => setBackendData(data)) // Update state with the parsed data
-      .catch(error => console.error('Error fetching data:', error));  // Handle errors
-  }, []);
-
   return (
-    <div>
-      {backendData.users.length === 0 ? (
-        <p>Loading...</p>
-      ) : (
-        backendData.users.map((user, i) => (
-          <p key={i}>{user}</p>
-        ))
-      )}
-    </div>
+    <Router>
+      <Routes> {/* Replace Switch with Routes */}
+        <Route path="/" element={<Index />} /> {/* Use element prop instead of component */}
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
+
+
+
