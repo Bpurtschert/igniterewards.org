@@ -1,20 +1,41 @@
 /* MyPoints Page Styles */
 .mypoints-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .mypoints-container h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .mypoints-container p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-  }
-  
-  /* Add additional styles for MyPoints content */
-  
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.mypoints-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.total-points h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.points-breakdown h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.points-breakdown ul {
+  list-style: none;
+  padding: 0;
+}
+
+.points-breakdown li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.points-breakdown li span:first-child {
+  font-weight: bold;
+}
+
+.points-breakdown li span:last-child {
+  color: #666;
+}
