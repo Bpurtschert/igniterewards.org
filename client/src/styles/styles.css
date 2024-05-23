@@ -21,7 +21,7 @@
   header {
     background-color: #002750;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
   }
   
   header h1 {
@@ -43,7 +43,6 @@
   header nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
   }
   
   /* Style hero section */
@@ -95,8 +94,8 @@
   }
   
   .logo {
-    height: 100%;
-    width: 45px;
+    height: 40px;
+    width: auto;
     object-fit: contain;
     margin-right: 10px;
   }
@@ -156,6 +155,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end; 
+    text-align: center;
     width: 100%;
   }
   
@@ -163,7 +163,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-top: 13px;
+    margin-top: 27px;
   }
   
   /* Add styles for the navigation links */
@@ -180,7 +180,6 @@
   .nav-menu ul li a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
   }
   
   /* Add styles to show the nav menu when the hamburger menu is clicked */
@@ -206,4 +205,6 @@
   .column {
     flex: 1; /* Make the columns flexible to fill available space */
   }
+  
+
   

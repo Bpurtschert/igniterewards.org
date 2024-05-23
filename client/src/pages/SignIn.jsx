@@ -37,6 +37,7 @@ function SignInPage(props) {
 
       if (data.isValid) {
         // User authenticated, navigate to the next page
+        console.log("User successfully authenticated")
         navigate('/home');
       } else {
         setError('Invalid credentials');

@@ -38,7 +38,7 @@ function SignUpPage() {
         <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} placeholder="Confirm Password" required />
         <button type="submit" className="button">Sign Up</button>
       </form>
-      <p>Already have an account? <Link to="/login">Log In</Link></p>
+      <p>Already have an account? <Link to="/SignIn">Log In</Link></p>
     </div>
   );
 }

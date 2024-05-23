@@ -1,0 +1,20 @@
+/* Shop Page Styles */
+.shop-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .shop-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .shop-container p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Add additional styles for shop content */
+  

@@ -1,0 +1,20 @@
+/* MyPoints Page Styles */
+.mypoints-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .mypoints-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .mypoints-container p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Add additional styles for MyPoints content */
+  

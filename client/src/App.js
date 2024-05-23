@@ -5,44 +5,67 @@ import SignIn from './pages/SignIn';
 import Home from './pages/Home';
 import Index from './pages/Index';
 import Welcome from './pages/Welcome';
+import Shop from './pages/Shop';
+import MyPoints from './pages/MyPoints';
+import MyAccount from './pages/MyAccount';
 import './App.css'; // Import CSS for styling
-import logo from './images/Logo_Horizontal.png'; // Import your logo image
-import { Link } from 'react-router-dom';
+import DefaultHeader from './components/defaultHeader'; // Corrected import statement
+import AuthenticatedUserHeader from './components/authenticatedUserHeader';
+
 
 function App() {
   return (
     <Router>
+      {/* DefaultHeader */}
       <div>
-        <header>
-          <div className="header-container">
-            <div className="header-table">
-              <div className="column">
-                <div className="logo-container">
-                  {/* Use the imported logo image */}
-                  <a href='/'><img src={logo} alt="Ignite Logo" className="logo" /></a>
-                </div>
-              </div>
-              <div className="column">
-                <div className="nav-container">
-                  <nav className="nav-menu">
-                    <ul>
-                      <li><a href="#features">Features</a></li>
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#contact">Contact</a></li>
-                      <li><a href='/SignIn'>Login</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/SignIn" element={<SignIn />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/Welcome" element={<Welcome />} />          
+
+          <Route path="/" element={<>
+          <DefaultHeader />
+          <Index /> 
+          </>} />
+
+          <Route path="/SignUp" element={<>
+          <DefaultHeader />
+          <SignUp /> 
+          </>} />
+
+          <Route path="/SignIn" element={<>
+          <DefaultHeader />
+          <SignIn /> 
+          </>} />
+
+          <Route path="/Welcome" element={<>
+          <DefaultHeader />
+          <Welcome /> 
+          </>} />
+
+        </Routes>
+      </div>
+      {/* AuthenticatedUserHeader */}
+      <div>
+        <Routes>
+
+          <Route path="/Home"element={<>
+          <AuthenticatedUserHeader />
+          <Home />
+          </>} />
+
+          <Route path="/Shop"element={<>
+          <AuthenticatedUserHeader />
+          <Shop />
+          </>} />
+
+          <Route path="/MyPoints"element={<>
+          <AuthenticatedUserHeader />
+          <MyPoints />
+          </>} />
+
+          <Route path="/MyAccount"element={<>
+          <AuthenticatedUserHeader />
+          <MyAccount />
+          </>} />
+
         </Routes>
       </div>
     </Router>
