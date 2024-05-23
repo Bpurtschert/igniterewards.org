@@ -1,32 +1,65 @@
 const express = require('express');
 const app = express();
 app.use(express.json()); // Middleware to parse JSON bodies
+const sql = require("mssql");
+require("dotenv").config();
 
-// Sample data for validation
-const validSchoolIDs = ['school1', 'school2', 'school3'];
-const validStudentIDs = {
-  'school1': ['student1', 'student2'],
-  'school2': ['student3', 'student4'],
-  'school3': ['student5', 'student6']
+// Configure database connection options using environment variables
+const config = {
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    server: process.env.DB_SERVER,
+    database: process.env.DB_DATABASE,
+    options: {
+        encrypt: true, // for Azure
+        trustServerCertificate: true // change to false for production
+    }
 };
 
+// Create connection pool
+const pool = new sql.ConnectionPool(config);
+const poolConnect = pool.connect();
+
+poolConnect.then(() => {
+    console.log("Database connection established successfully.");
+}).catch(error => {
+    console.error("Error establishing database connection:", error);
+});
+
 // Endpoint to validate SchoolID and StudentID
-app.post('/api/validate', (req, res) => {
-  const { schoolID, studentID } = req.body;
-  if (validSchoolIDs.includes(schoolID) && validStudentIDs[schoolID].includes(studentID)) {
-    res.json({ valid: true });
-  } else {
-    res.json({ valid: false });
-  }
+app.post('/VerifySchoolId', (req, res) => {
+    // Your existing code for this endpoint
 });
 
 // Endpoint to handle profile creation
 app.post('/api/create-profile', (req, res) => {
-  const { firstName, lastName, password } = req.body;
-  // Here you would normally save the profile to a database
-  res.json({ success: true });
+    // Your existing code for this endpoint
+});
+
+// Endpoint to authenticate login
+app.post('/getLoginCredentials', async (req, res) => {
+    try {
+        // Connect to SQL
+        const request = pool.request();
+
+        const getLoginCredentials = `SELECT * FROM stg.Users WHERE StudentID = @StudentID and Password = @Password`;
+
+        request.input("StudentID", sql.Int, req.body.studentID);
+        request.input("password", sql.NVarChar, req.body.password);
+        console.log(req.body.studentID)
+        console.log(req.body.password)
+
+        const getLoginCredentialsResults = await request.query(getLoginCredentials);
+
+        const isValid = getLoginCredentialsResults.recordset.length > 0;
+        res.json({ isValid });
+
+    } catch (error) {
+        console.error("Error fetching default report data:", error);
+        res.status(500).send("Internal Server Error");
+    }
 });
 
 app.listen(4000, () => {
-  console.log("Server has started on port 4000");
+    console.log("Server has started on port 4000");
 });

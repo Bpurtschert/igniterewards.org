@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
-import '../styles/Earn.css'; // Import CSS for styling
+import '../styles/Welcome.css'; // Import CSS for styling
 
-function Earn() {
+function Welcome() {
     return (
-      <div className="Earn">
+      <div className="Welcome">
         <h1>Welcome to Ignite Rewards ™</h1>
         <div className="actions">
           <Link to="/SignIn" className="button login">Log In</Link>
@@ -14,4 +14,4 @@ function Earn() {
     );
   }
 
-export default Earn;
+export default Welcome;

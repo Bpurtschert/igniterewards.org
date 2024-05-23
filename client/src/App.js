@@ -4,7 +4,7 @@ import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import Home from './pages/Home';
 import Index from './pages/Index';
-import Earn from './pages/Earn';
+import Welcome from './pages/Welcome';
 import './App.css'; // Import CSS for styling
 import logo from './images/Logo_Horizontal.png'; // Import your logo image
 import { Link } from 'react-router-dom';
@@ -29,7 +29,7 @@ function App() {
                       <li><a href="#features">Features</a></li>
                       <li><a href="#about">About</a></li>
                       <li><a href="#contact">Contact</a></li>
-                      <li><a href='/Earn'>Earn</a></li>
+                      <li><a href='/SignIn'>Login</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -42,7 +42,7 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/Earn" element={<Earn />} />          
+          <Route path="/Welcome" element={<Welcome />} />          
         </Routes>
       </div>
     </Router>
