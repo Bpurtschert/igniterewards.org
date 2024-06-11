@@ -38,6 +38,7 @@ function Shop() {
           <a href="/assignments" className="nav-link">Assignments</a>
           <a href="/shop" className="nav-link">Shop</a>
           <a href="/myPoints" className="nav-link">My Points</a>
+          <a href="/myaccount" className="nav-link">My Account</a>
           <a href="/"  className="nav-link">Sign Out</a>
         </nav>
       </header>
