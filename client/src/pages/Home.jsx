@@ -4,45 +4,121 @@ import '../styles/Home.css'; // Import CSS for styling
 function HomePage() {
   return (
     <div className="home-page">
-      <h1>My Assignments</h1>
-      <div className="card">
-        <h2>Assignment 1</h2>
-        <p>Class Name: Math</p>
-        <p>Stars: 3</p>
-        <p>Due Date: 2024-05-30</p>
-      </div>
-      <div className="card">
-        <h2>Assignment 2</h2>
-        <p>Class Name: Science</p>
-        <p>Stars: 4</p>
-        <p>Due Date: 2024-06-05</p>
-      </div>
-      <div className="card">
-        <h2>Assignment 3</h2>
-        <p>Class Name: History</p>
-        <p>Stars: 5</p>
-        <p>Due Date: 2024-06-10</p>
-      </div>
-      <div className="card">
-        <h2>Assignment 4</h2>
-        <p>Class Name: English</p>
-        <p>Stars: 2</p>
-        <p>Due Date: 2024-06-15</p>
-      </div>
-      <div className="card">
-        <h2>Assignment 5</h2>
-        <p>Class Name: Art</p>
-        <p>Stars: 3</p>
-        <p>Due Date: 2024-06-20</p>
-      </div>
-      <div className="card">
-        <h2>Assignment 6</h2>
-        <p>Class Name: Music</p>
-        <p>Stars: 1</p>
-        <p>Due Date: 2024-06-25</p>
-      </div>
+      <header className="header">
+        <nav className="navbar">
+          <a href="/Home" className="nav-link">Home</a>
+          <a href="/assignments" className="nav-link">Assignments</a>
+          <a href="/shop" className="nav-link">Shop</a>
+          <a href="/myPoints" className="nav-link">My Points</a>
+          <a href="/"  className="nav-link">Sign Out</a>
+        </nav>
+      </header>
+      <main>
+        <section className="assignments section">
+          <div className="card-container">
+            <div className="card">
+              <h3>Upcoming Assignments</h3>
+              <div className='row'>
+                <div className='column'>
+                  Assignment: 
+                </div>
+                <div className='column'>
+                  Due Date:
+                </div>
+                <div className='column'>
+                  Stars:
+                </div>
+              </div>
+              <hr />
+              <div className='row'>
+                <div className='column'>
+                  Math Test 
+                </div>
+                <div className='column'>
+                  June 12th, 2024
+                </div>
+                <div className='column'>
+                  14
+                </div>
+              </div>
+              <div className='row'>
+                <div className='column'>
+                  English Essay 
+                </div>
+                <div className='column'>
+                  June 15th, 2024
+                </div>
+                <div className='column'>
+                  5
+                </div>
+              </div>
+              <div className='row'>
+                <div className='column'>
+                  Group Project 
+                </div>
+                <div className='column'>
+                  June 15th, 2024
+                </div>
+                <div className='column'>
+                  20
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <h3>Shop</h3>
+              <div className='shop-card-container'>
+                <div className='shop-card'>
+                  Mcdonalds
+                </div>
+                <div className='shop-card'>
+                    Amazon gift card
+                </div>
+                <div className='shop-card'>
+                    Prom Tickets
+                </div>
+                <div className='shop-card'>
+                    Stanley
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <h3>My Stars</h3>
+              <div style={{ fontSize: '25px' }}><strong>Your total stars: 1,345</strong></div>
+            </div>
+            <div className="card">
+              <h3>My Rewards</h3>
+              <div className='row'>
+                <div className='column'>
+                  Reward: 
+                </div>
+                <div className='column'>
+                  Total Stars:
+                </div>
+              </div>
+              <hr />
+              <div className='row'>
+                <div className='column'>
+                  Free Chick fil a 
+                </div>
+                <div className='column'>
+                  15
+                </div>
+              </div>
+              <div className='row'>
+                <div className='column'>
+                  5 Extra Credit Points 
+                </div>
+                <div className='column'>
+                  50
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
+
 
 export default HomePage;

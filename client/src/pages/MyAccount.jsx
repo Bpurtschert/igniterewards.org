@@ -58,60 +58,72 @@ function MyAccount() {
   };
 
   return (
-    <div className="profile-container">
-      <h1>Edit Profile</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={formValues.username}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formValues.email}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="bio">Bio:</label>
-          <textarea
-            id="bio"
-            name="bio"
-            value={formValues.bio}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="darkMode">Dark Mode:</label>
-          <input
-            type="checkbox"
-            id="darkMode"
-            name="darkMode"
-            checked={formValues.darkMode}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="notifications">Notifications:</label>
-          <input
-            type="checkbox"
-            id="notifications"
-            name="notifications"
-            checked={formValues.notifications}
-            onChange={handleInputChange}
-          />
-        </div>
-        <button type="submit">Update Profile</button>
-      </form>
+    <div className='account-page'>
+        <header className="header">
+        <nav className="navbar">
+          <a href="/Home" className="nav-link">Home</a>
+          <a href="/assignments" className="nav-link">Assignments</a>
+          <a href="/shop" className="nav-link">Shop</a>
+          <a href="/myPoints" className="nav-link">My Points</a>
+          <a href="/myaccount" className="nav-link">My Account</a>
+          <a href="/"  className="nav-link">Sign Out</a>
+        </nav>
+      </header>
+      <div className="profile-container">
+        <h1>Edit Profile</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              value={formValues.username}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formValues.email}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="bio">Bio:</label>
+            <textarea
+              id="bio"
+              name="bio"
+              value={formValues.bio}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="darkMode">Dark Mode:</label>
+            <input
+              type="checkbox"
+              id="darkMode"
+              name="darkMode"
+              checked={formValues.darkMode}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="notifications">Notifications:</label>
+            <input
+              type="checkbox"
+              id="notifications"
+              name="notifications"
+              checked={formValues.notifications}
+              onChange={handleInputChange}
+            />
+          </div>
+          <button type="submit">Update Profile</button>
+        </form>
+      </div>
     </div>
   );
 }

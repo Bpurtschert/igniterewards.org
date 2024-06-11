@@ -1,31 +1,114 @@
-/* HomePage.css */
+/* Home.css */
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #f8f1f1;
+  margin: 0;
+  padding: 0;
+}
 
 .home-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  .card {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .card h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  background-color: #f8d7a4;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ff6f61;
+  font-size: 18px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.assignments .card,
+.shop .card,
+.points .card,
+.rewards .card {
+  transition: transform 0.2s;
+}
+
+.assignments .card:hover,
+.shop .card:hover,
+.points .card:hover,
+.rewards .card:hover {
+  transform: scale(1.05);
+}
+
+a.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.card:hover {
+  background-color: #ffe4c4;
+}
+
+/* Add a new class for the card container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items evenly in each row */
+}
+
+/* Update the styling for individual cards */
+.card {
+  width: calc(50% - 20px); /* Adjust the width to fit two cards in a row */
+  background-color: #fffbe9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.shop-card {
+  width: calc(50% - 20px); /* Adjust the width to fit two cards in a row */
+  background-color: #fffcef;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.shop-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items evenly in each row */
+}
+
+.column {
+  float: left;
+  width: 33%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

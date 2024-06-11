@@ -1,30 +1,19 @@
 const express = require('express');
 const app = express();
 app.use(express.json()); // Middleware to parse JSON bodies
-const sql = require("mssql");
+const mysql = require("mysql2");
 require("dotenv").config();
 
 // Configure database connection options using environment variables
 const config = {
+    host: process.env.DB_SERVER,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    server: process.env.DB_SERVER,
     database: process.env.DB_DATABASE,
-    options: {
-        encrypt: true, // for Azure
-        trustServerCertificate: true // change to false for production
-    }
 };
 
 // Create connection pool
-const pool = new sql.ConnectionPool(config);
-const poolConnect = pool.connect();
-
-poolConnect.then(() => {
-    console.log("Database connection established successfully.");
-}).catch(error => {
-    console.error("Error establishing database connection:", error);
-});
+const pool = mysql.createPool(config);
 
 // Endpoint to validate SchoolID and StudentID
 app.post('/VerifySchoolId', (req, res) => {
@@ -39,23 +28,28 @@ app.post('/api/create-profile', (req, res) => {
 // Endpoint to authenticate login
 app.post('/getLoginCredentials', async (req, res) => {
     try {
-        // Connect to SQL
-        const request = pool.request();
+        // Extract student ID and password from request body
+        const { studentID, password } = req.body;
 
-        const getLoginCredentials = `SELECT * FROM stg.Users WHERE StudentID = @StudentID and Password = @Password`;
+        // Get a new connection from the pool
+        const connection = await pool.promise().getConnection();
 
-        request.input("StudentID", sql.Int, req.body.studentID);
-        request.input("password", sql.NVarChar, req.body.password);
-        console.log(req.body.studentID)
-        console.log(req.body.password)
+        // Execute the query to fetch login credentials
+        const [rows, fields] = await connection.execute(
+            `SELECT * FROM Users WHERE StudentID = ? AND Password = ?`,
+            [studentID, password]
+        );
 
-        const getLoginCredentialsResults = await request.query(getLoginCredentials);
+        // Release the connection back to the pool
+        connection.release();
 
-        const isValid = getLoginCredentialsResults.recordset.length > 0;
+        // Check if any matching records were found
+        const isValid = rows.length > 0;
+
+        // Send response indicating whether login is valid
         res.json({ isValid });
-
     } catch (error) {
-        console.error("Error fetching default report data:", error);
+        console.error("Error fetching login credentials:", error);
         res.status(500).send("Internal Server Error");
     }
 });

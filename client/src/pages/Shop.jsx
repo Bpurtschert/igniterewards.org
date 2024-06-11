@@ -31,15 +31,26 @@ function Shop() {
     ];
   
     return (
-      <div className="shop-container">
-        <h1>Shop</h1>
-        <div className="shop-grid">
-          {items.map((item, index) => (
-            <div key={index} className="item-card">
-              <h2>{item.name}</h2>
-              <p>Stars: {item.stars}</p>
-            </div>
-          ))}
+      <div className='shop-page'>
+        <header className="header">
+        <nav className="navbar">
+          <a href="/Home" className="nav-link">Home</a>
+          <a href="/assignments" className="nav-link">Assignments</a>
+          <a href="/shop" className="nav-link">Shop</a>
+          <a href="/myPoints" className="nav-link">My Points</a>
+          <a href="/"  className="nav-link">Sign Out</a>
+        </nav>
+      </header>
+        <div className="shop-container">
+          <h1>Shop</h1>
+          <div className="shop-grid">
+            {items.map((item, index) => (
+              <div key={index} className="item-card">
+                <h2>{item.name}</h2>
+                <p>Stars: {item.stars}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );

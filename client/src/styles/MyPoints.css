@@ -1,4 +1,36 @@
 /* MyPoints Page Styles */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #f8f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+.points-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  background-color: #f8d7a4;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ff6f61;
+  font-size: 18px;
+}
+
 .mypoints-container {
   width: 100%;
   max-width: 800px;

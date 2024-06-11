@@ -1,4 +1,36 @@
 /* Shop Page Styles */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #f8f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+.shop-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  background-color: #f8d7a4;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ff6f61;
+  font-size: 18px;
+}
+
 .shop-container {
   width: 100%;
   max-width: 1200px;
@@ -18,10 +50,31 @@
 }
 
 .item-card {
-  border: 1px solid #ccc;
+  background-color: #fffbe9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.item-card {
+  background-color: #fffbe9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s; /* Add transition property here */
+}
+
+.item-card:hover {
+  transform: scale(1.05); /* Apply the zoom effect on hover */
+}
+
+/* Add a new class for the card container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items evenly in each row */
 }
 
 .item-card h2 {
