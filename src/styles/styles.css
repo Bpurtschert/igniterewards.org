@@ -573,7 +573,7 @@ footer p {
   background-color: var(--secondary-color); /* Adjust background color */
   padding: 10px;
   border-radius: 6pt;
-  margin-right: 100px;
+  margin-right: 25px;
 }
 
 .nav-menu.open ul li {
