@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Primary';
-  src: url('../../fonts/PetrovSans-Regular.ttf') format('truetype'),
+  src: url('/src/fonts/PetrovSans.ttf') format('truetype'),
 }
 
 :root {
@@ -29,6 +29,7 @@ html, body {
   min-height: 100vh; /* Ensure body takes full viewport height */
   display: flex;
   flex-direction: column;
+  width: 100vw;
 }
 
 body > main {
@@ -496,7 +497,14 @@ footer p {
 .footer-columns {
   display: flex;
   justify-content: space-around; /* Space out columns evenly */
-  width: 100%;
+  width: 100vw;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-columns {
+    display: block; /* Stack elements vertically */
+    text-align: center; /* Optional: Center content */
+  }
 }
 
 .footer-row {
