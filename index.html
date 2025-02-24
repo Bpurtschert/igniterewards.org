@@ -1,84 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ignite Rewards</title>
-    <link rel="stylesheet" href="src/styles/styles.css">
-    <link rel="icon" href="src/images/Ignite_Logo_No_Background.png" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="src/styles/styles.css" />
+  </head>
 
-<body>
+  <body class="page-container">
+
+    <!-- Header -->
     <header>
-        <div class="header-container">
-            <div class="header-table">
-                <div class="column">
-                    <div class="logo-container">
-                        <img src="src/images/Ignite_Logo_No_Background.png" alt="Ignite Logo" class="logo">
-                        <h1>Ignite</h1>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="nav-container">
-                        <nav class="nav-menu">
-                            <ul>
-                                <li><a href="#features">Features</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <div class="hamburger-menu">
-                            <img src="src/images/Hamburger_Menu_White.svg" alt="">
-                        </div>
-                    </div>
-                </div>
+      <div class="header-container">
+        <div class="header-table">
+          <div class="header-column-logo">
+            <div class="logo-container">
+              <a href="/"
+                ><img src="src/images/Logo.png" alt="Ignite Logo" class="logo"
+              /></a>
             </div>
+          </div>
+          <div class="header-column-nav">
+            <div class="nav-container">
+              <div class="hamburger-menu" aria-label="Open navigation menu"></div>
+              <nav class="nav-menu">
+                <ul>
+                  <li><a href="/#features">Features</a></li>
+                  <li><a href="/#about">About</a></li>
+                  <li><a href="/#contact">Contact</a></li>
+                  <li><a href="/web/login">Login</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
+      </div>
     </header>
 
-    <section id="hero">
+    <!-- Main Content -->
+    <div class="content-wrap">
+      <section id="hero">
         <div class="container">
-            <h2>Unlock Your Academic Potential</h2>
-            <p>Get rewarded for your hard work and academic achievements with the Ignite Rewards app.</p>
-            <a href="#download" class="btn">Download Now</a>
-        </div>
-    </section>
+          <h2 style="color: black;">Ignite Your Potential</h2>
+          <p style="font-size: 20pt;">
+            Empower students with a rewards program that incentivizes academic achievement, <br> encourages good grades, and fosters a love for continuous learning.
+          </p>
+          
+          <p style="font-size: 15pt;">Earn rewards for your efforts:</p>
 
-    <section id="features">
+          <ul style="color: black; font-size: 15pt;">
+            <li>✅ Assignments</li>
+            <li>✅ Tests & Quizzes</li>
+            <li>✅ Attendance</li>
+            <li>✅ Success Streaks & More</li>
+          </ul>
+          <p>
+            <a href="#" class="join-btn">Join Now</a>
+          </p>
+        </div>
+      </section>      
+  
+      <section id="features">
         <div class="container">
-            <h2>Key Features</h2>
-            <ul>
-                <li>Academic Goal Setting</li>
-                <li>Point tracking</li>
-                <li>Reward System</li>
-                <li>Student Privacy & Security</li>
-            </ul>
+          <h2>Key Features</h2>
+          <p>Ignite Rewards is designed to motivate and empower students by turning academic success into a rewarding experience. Here’s what makes our platform stand out:</p>
+          
+          <ul>
+            <li>🎯 <strong>Academic Goal Setting:</strong> Students can set personalized academic goals and track their progress to stay motivated.</li>
+            <li>📊 <strong>Point Tracking:</strong> Earn points for completing assignments, quizzes, tests, and maintaining attendance.</li>
+            <li>🏆 <strong>Reward System:</strong> Redeem points for real rewards, encouraging continuous learning and participation.</li>
+            <li>🔒 <strong>Student Privacy & Security:</strong> We prioritize student data protection with secure authentication and privacy safeguards.</li>
+          </ul>
+      
         </div>
-    </section>
-
-    <section id="about">
+      </section>
+      
+  
+      <div class="vision-about-container">
+        <section id="vision">
+          <div class="container">
+            <h2>🚀 Our Vision</h2>
+            <p>
+              Our journey began with the goal of helping students access proper nutrition, but we soon realized the greater potential of Ignite Rewards. 
+              We saw the challenges students face—not just in education, but also in attendance and motivation.
+            </p>
+            <p>
+              Traditional schooling instills discipline, but it often doesn’t mirror the real world. In the workforce, when you put in effort and perform well, you're rewarded. 
+              This is the foundation of Ignite Rewards: to inspire students, help them build strong habits, and instill lifelong motivation for success.
+            </p>
+            <p>
+              🎓 <strong>Encourage Learning</strong> – Motivate students to stay engaged and reach their full potential.  
+              📅 <strong>Improve Attendance</strong> – Reward consistency and dedication to learning.  
+              🏆 <strong>Build Future Success</strong> – Teach valuable life skills that extend beyond the classroom.  
+            </p>
+          </div>
+        </section>
+      
+        <section id="about">
+          <div class="container">
+            <h2>🌟 About Us</h2>
+            <p>
+              At <strong>Ignite Rewards</strong>, we believe that students should be recognized for their academic efforts. Our program turns education into an exciting and rewarding experience.
+            </p>
+      
+            <div class="features">
+              <div class="feature-box">
+                <i class="fas fa-medal"></i>
+                <h3>Rewarding Achievements</h3>
+                <p>Students earn points for good grades, participation, and continuous learning.</p>
+              </div>
+      
+              <div class="feature-box">
+                <i class="fas fa-chart-line"></i>
+                <h3>Tracking Progress</h3>
+                <p>Our platform helps students set academic goals and monitor their success.</p>
+              </div>
+      
+              <div class="feature-box">
+                <i class="fas fa-user-shield"></i>
+                <h3>Student Privacy</h3>
+                <p>We prioritize security and ensure all student data is protected.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      
+  
+      <section id="contact">
         <div class="container">
-            <h2>About Us</h2>
-            <p>At Ignite Rewards, we're committed to providing a program that incentivizes student academic achievement by rewarding good grades and promoting continuous learning. Our mission is to address the lack of motivation and recognition for academic achievements among students, enticing them to attend all their classes to earn rewards.</p>
+          <h2>📞 Contact Us</h2>
+          <p>If you have any questions or feedback, feel free to reach out!</p>
+          
+          <div class="contact-info">
+            <div class="contact-box">
+              <i class="fas fa-envelope"></i>
+              <p><strong>Email:</strong> info@igniterewards.org</p>
+            </div>
+      
+            <div class="contact-box">
+              <i class="fas fa-phone"></i>
+              <p><strong>Phone:</strong> 801-708-3245</p>
+            </div>
+          </div>
+      
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
         </div>
-    </section>
+      </section>      
+    </div>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or feedback, feel free to contact us:</p>
-            <p>Email: info@igniterewards.org</p>
-            <p>Phone: 801-708-3245</p>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Ignite Rewards LLC</p>
+      <div class="footer-container">
+        <div class="footer-row">
+          <img src="src/images/Logo.png" alt="Ignite Logo" class="logo" style="filter: invert();"/>
         </div>
-    </footer>
-    <script src="/src/javscript/index.js"></script>
-</body>
 
+        <div class="footer-columns">
+          <div class="footer-column">
+            <div>
+              IGNITE REWARDS
+            </div>
+            <ul>
+              <li><a href="/dashboard">Reward Partnerships</a></li>
+              <li><a href="/">School Partnerships</a></li>
+              <li><a href="/">Canvas LMS Integrations</a></li>
+            </ul>
+          </div>          
+          <div class="footer-column">
+            ABOUT
+            <ul>
+              <li><a href="/">About The Team</a></li>
+              <li><a href="/">Our Vision</a></li>
+              <li><a href="/">Our Achievements</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            CONTACT
+            <ul>
+              <ul>
+                <li style="color: var(--accent-color); font-size: 11pt;">Email: info@igniterewards.org</li>
+                <li style="color: var(--accent-color);">Phone: (801) 708-3245 </li>
+              </ul>
+            </ul>
+          </div>
+          <div class="footer-column">
+            FAQS
+            <ul>
+              <ul>
+                <li><a href="/">Contact Us</a></li>
+                <li><a href="/">Privacy & Security</a></li>
+                <li><a href="/">FAQ Doc</a></li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div style="text-align: center; padding-top: 10px; color: var(--accent-color);"> &copy; 2025 Ignite Rewards LLC. All rights reserved. </div>
+    </footer> <!--&copy; 2025 Ignite Rewards LLC. All rights reserved.-->
+    <script src="/javascript/hamburgerMenu.js"></script>
+  </body>
 </html>
