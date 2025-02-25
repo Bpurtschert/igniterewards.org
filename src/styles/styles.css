@@ -1953,3 +1953,60 @@ input[type="number"]::-webkit-inner-spin-button {
   transform: translateY(1px);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+
+.partnership-container{
+  background: url('/src/images/heroImage.png') no-repeat center center;
+  padding: 50px 0;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: keeps the background fixed while scrolling */
+  width: 100vw;
+  height: auto; /* Makes it take up the full screen height */
+}
+
+.partnership-info{
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: black;
+}
+
+.partnership-info h2,
+.partnership-info p {
+  color: #000;
+}
+
+
+.vision-info{
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: black;
+}
+
+.vision-info h3,
+.vision-info p{
+  color: #000;
+}
+
+.contactus-info{
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: black;
+}
+
+.contactus-info h4,
+.contactus-info p,
+.contactus-info a{
+  color: #000;
+}
