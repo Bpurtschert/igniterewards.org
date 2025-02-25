@@ -2010,3 +2010,52 @@ input[type="number"]::-webkit-inner-spin-button {
 .contactus-info a{
   color: #000;
 }
+
+.privacy-container {
+  background: url('/src/images/heroImage.png') no-repeat center center/cover;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: keeps the background fixed while scrolling */
+}
+
+.overlay {
+  padding: 20px;
+  color: black;
+  width: 100%;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.content-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.policy-section {
+  margin-bottom: 15px;
+}
+
+.policy-section h2 {
+  font-size: 22px;
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.policy-section p {
+  font-size: 16px;
+  line-height: 1.6;
+}
