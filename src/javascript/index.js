@@ -7,3 +7,4 @@ hamburgerMenu.addEventListener('click', () => {
   hamburgerMenu.classList.toggle('open');
   navContainer.classList.toggle('open'); // Toggle the 'open' class on the nav-container
 });
+

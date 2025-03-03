@@ -66,17 +66,37 @@ header nav ul li a {
 
 /* Style hero section */
 #hero {
-  background: url('/src/images/heroImage.png') no-repeat center center;
-  padding: 50px 0;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: white;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Optional: keeps the background fixed while scrolling */
-  width: 100vw;
-  height: auto; /* Makes it take up the full screen height */
-  display: flex;
+  overflow: hidden;
 }
+
+#hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* Change from -1 to 0 */
+}
+
+#hero .container {
+  position: relative;
+  z-index: 1; /* Ensure content stays above the video */
+  background: rgba(255, 255, 255, 0.6); /* Optional: Light background for readability */
+  padding: 20px;
+  border-radius: 10px;
+  color: black;
+}
+
 
 #hero h2 {
   font-size: 2.5rem;
@@ -110,16 +130,71 @@ header nav ul li a {
   color: white;
   text-align: center;
   padding: 80px 20px;
+  height: 800px;
+}
+
+#features .feature-header-1 {
+  background-color: rgba(98, 255, 145, 0.973);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 75px;
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  text-align: center; /* Ensures text stays centered */
+  padding-top: 20px; /* Optional: Adjust padding */
+  font-size: larger;
+  color: white;
+}
+
+#features .feature-header-2 {
+  background-color: rgb(90, 236, 255);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 75px;
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  text-align: center; /* Ensures text stays centered */
+  padding-top: 20px; /* Optional: Adjust padding */
+  font-size: larger;
+  color: white;
+}
+
+#features .feature-header-3 {
+  background-color: rgb(255, 76, 210);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 75px;
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  text-align: center; /* Ensures text stays centered */
+  padding-top: 20px; /* Optional: Adjust padding */
+  font-size: larger;
+  color: white;
+}
+
+
+#features .feature-card{
+  padding-top: 50px;
+  color: black;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  clip-path: inset(0px -10px -10px -10px);
+  height: 400px;
 }
 
 #features .container {
-  max-width: 900px;
-  margin: 0 auto;
-  background: var(--secondary-color); /* Semi-transparent overlay for readability */
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+  grid-gap: 20px; /* Space between items */
+  width: 100%; /* Ensures it takes the full width of #features */
+  max-width: 1200px; /* Prevents it from being too wide on large screens */
+  margin: 0 auto; /* Centers the container */
+  align-items: stretch; /* Makes all grid items equal in height */
+  justify-content: center; /* Ensures grid stays centered */
+  text-align: center;
 }
+
 
 #features h2 {
   font-size: 32px;
@@ -130,10 +205,20 @@ header nav ul li a {
   color: var(--third-color);
 }
 
+#features h3 {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  padding: 20px;
+  color: #000;
+}
+
 #features p {
   font-size: 18px;
   margin-bottom: 30px;
   line-height: 1.6;
+  text-align: left;
+  padding: 20px;
 }
 
 #features ul {
@@ -497,7 +582,7 @@ footer p {
 .footer-columns {
   display: flex;
   justify-content: space-around; /* Space out columns evenly */
-  width: 100vw;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -554,6 +639,7 @@ footer p {
   list-style: none;
   transition: right 0.3s ease;
   position: absolute;
+  z-index: 1000;
 }
 
 /* Add styles for the navigation links */
@@ -591,7 +677,7 @@ footer p {
 
 
 /* Add this media query for smaller screens */
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1200px) {
   .nav-menu {
     display: none; /* Hide the nav menu by default on small screens */
   }
