@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Primary';
-  src: url('/src/fonts/PetrovSans.ttf') format('truetype'),
+  src: url('/src/fonts/IgniteRW.ttf') format('truetype'),
 }
 
 :root {
@@ -2042,7 +2042,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 
 .partnership-container{
-  background: url('/src/images/heroImage.png') no-repeat center center;
   padding: 50px 0;
   text-align: center;
   color: white;
@@ -2144,4 +2143,59 @@ input[type="number"]::-webkit-inner-spin-button {
 .policy-section p {
   font-size: 16px;
   line-height: 1.6;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-card h2 {
+  font-size: 22px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.profile-card h4 {
+  font-size: 16px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.policy-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.policy-card h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.policy-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.policy-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
