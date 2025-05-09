@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Achievements</title>
+    <title>Canvas LMS Inegrations</title>
     <link rel="icon" type="image/png" href="../src/images/IGNITE ICON.png" />
     <link rel="stylesheet" href="../src/styles/styles.css" />
   </head>
@@ -42,68 +42,37 @@
 
     <!-- Main Content -->
     <div class="content-wrap">
-      <section style="padding: 60px 20px; background-color: #fdfdfd;">
-        <div class="container">
-          <h2 style="text-align: center; color: var(--primary-color); font-size: 2.5rem; margin-bottom: 10px;">
-            Our Achievements
-          </h2>
-          <p style="text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto 50px;">
-            Every milestone represents a step forward in our mission to empower students and schools through innovation, integrity, and inspired learning solutions.
-          </p>
-    
-          <div class="achievements-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-            <!-- Canvas Achievement Card -->
-            <div class="achievement-card" style="
-                background: white;
-                padding: 25px;
-                border-radius: 10px;
-                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
-                text-align: center;
-                transition: transform 0.3s;
-              ">
-              <img src="../src/images/canvas_logo.png" alt="Canvas LMS Logo" style="width: 80px; height: auto; margin-bottom: 15px;" />
-              <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 10px;">
-                Canvas LMS Official Partner
-              </h3>
-              <p style="font-size: 1rem; color: #444;">
-                Recognized as an official Canvas LMS integration partner — a testament to our commitment to seamless, classroom-ready technology that drives engagement and achievement.
-              </p>
+        <section class="login-container">
+          <h2>Login to Ignite Rewards</h2>
+      
+          <form class="account-form">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="yourname@school.edu" required />
             </div>
-    
-            <!-- Placeholder for Future Achievements -->
-            <div class="achievement-card" style="
-                background: white;
-                padding: 25px;
-                border-radius: 10px;
-                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
-                text-align: center;
-                transition: transform 0.3s;
-              ">
-              <img src="../src/images/600x600 google.png" alt="Google Partner Logo" style="width: 125px; height: auto;" />
-              <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 10px;">
-                Google for Education Partner
-              </h3>
-              <p style="font-size: 1rem; color: #444;">
-                Recognized as an official Google for Education Partner — a testament to our commitment to seamless, classroom-ready technology that drives engagement and achievement.
-              </p>
+      
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password" required />
             </div>
-            <!-- Placeholder for Future Achievements -->
-            <!-- <div class="achievement-card" style="
-                background: #f4f4f4;
-                padding: 25px;
-                border-radius: 10px;
-                text-align: center;
-                opacity: 0.4;
-                font-style: italic;
-              ">
-              <p>More milestones coming soon...</p>
-            </div> -->
-          </div>
-        </div>
-      </section>
-    </div>
+      
+            <div class="form-actions">
+              <button type="submit" class="btn">Log In</button>
+            </div>
+      
+            <p style="margin-top: 20px;">
+              Don’t have an account? 
+              <a href="../html/schoolPartnershipForm.html" style="color: var(--secondary-color); text-decoration: none;">Sign up here</a>.
+            </p>
+            <p style="margin-top: 10px;">
+              <a href="/html/forgotPassword.html" style="color: var(--secondary-color); text-decoration: none;">Forgot your password?</a>
+            </p>
+          </form>
+        </section>
+      </div>
+      
     
-    
+      
 
     <!-- Footer -->
     <footer>
@@ -125,6 +94,7 @@
               <li><a href="../html/schoolPartnerships.html">School Partnerships</a></li>
               <li><a href="../html/canvasIntegrations.html">Canvas LMS Integrations</a></li>
               <li><a href="../html/studentMotivationSurvey.html">Teacher | Student Motivation Survey</a></li>
+
             </ul>
           </div>
           <div class="footer-column">
